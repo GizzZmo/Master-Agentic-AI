@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom cyberpunk styles */
+@layer base {
+  body {
+    @apply bg-cyber-dark text-cyber-blue font-mono;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
+  }
+  
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #00d4ff #2a2a2a;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    @apply bg-cyber-gray;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    @apply bg-cyber-blue rounded;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyber-purple;
+  }
+}
+
+@layer components {
+  .cyber-border {
+    @apply border border-cyber-blue/30 shadow-cyber;
+  }
+  
+  .cyber-button {
+    @apply bg-cyber-gray hover:bg-cyber-light-gray border border-cyber-blue/50 
+           text-cyber-blue hover:text-cyber-green transition-all duration-300
+           hover:shadow-cyber-strong;
+  }
+  
+  .cyber-input {
+    @apply bg-cyber-darker border border-cyber-blue/30 text-cyber-blue 
+           placeholder-cyber-blue/50 focus:border-cyber-green focus:shadow-cyber
+           focus:outline-none transition-all duration-300;
+  }
+  
+  .cyber-modal {
+    @apply bg-cyber-dark border-2 border-cyber-blue/50 shadow-cyber-strong
+           backdrop-blur-sm;
+  }
+  
+  .cyber-card {
+    @apply bg-cyber-darker/80 border border-cyber-blue/20 shadow-cyber
+           backdrop-blur-sm;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
