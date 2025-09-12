@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # Frontend build stage
+  frontend-build:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - frontend-dist:/app/dist
+
+  # Backend service
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - frontend-dist:/app/app/static
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    depends_on:
+      - frontend-build
+    restart: unless-stopped
+
+volumes:
+  frontend-dist:
