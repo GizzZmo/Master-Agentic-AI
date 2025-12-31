@@ -22,7 +22,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "no-useless-catch": "off",
-    "no-constant-condition": "off",
+    "no-constant-condition": ["error", { checkLoops: false }],
     "react/no-unescaped-entities": "off",
   },
 };
