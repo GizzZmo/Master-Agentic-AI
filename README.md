@@ -285,3 +285,7 @@ The provided `docker-compose.yml` is set up for easy local deployment. For produ
 5.  **HTTPS**: For production, always use HTTPS to encrypt communication. This typically involves setting up a reverse proxy (like Nginx or Caddy) or using your cloud provider's load balancer/gateway.
 
 This comprehensive setup provides a robust foundation for the Master Agentic AI, demonstrating the power of multi-agent systems and ethical AI principles in a practical application.
+
+## Continuous Integration
+
+A GitHub Actions workflow validates the project on every push and pull request by compiling the backend and running frontend lint/build steps. See [WORKFLOWS.md](WORKFLOWS.md) for the exact commands and how to run them locally.
