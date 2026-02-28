@@ -3,6 +3,14 @@
 
 The "Master Agentic AI" application is a sophisticated Multi-Agent System (MAS) designed to embody the principles outlined in the provided blueprint, "Architecting the Agentic-Inclusive AI." It features a cyberpunk-themed user interface and allows users to integrate their own Gemini API key.
 
+## Screenshots
+
+### Main Chat Interface
+![Master Agentic AI – main chat interface showing the cyberpunk-themed welcome screen](https://github.com/user-attachments/assets/fb170386-4344-4800-a4ca-b7bfff31c43f)
+
+### API Configuration (Settings Modal)
+![API Configuration modal for entering the Gemini API key](https://github.com/user-attachments/assets/9a5fe157-8961-4956-af0c-e41a2a870543)
+
 ## Master Agentic AI: System Overview
 
 This application is built as a full-stack solution, comprising a React frontend and a FastAPI backend. It implements a modular, multi-agent architecture to overcome the limitations of monolithic LLM prompting, as detailed in the blueprint.
